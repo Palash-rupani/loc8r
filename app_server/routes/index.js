@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const ctrlLocations =
-require('../controllers/locations');
+const ctrlLocations = require('../controllers/locations');
 const ctrlOthers = require('../controllers/others');
-
 
 /* Locations pages */
 router.get('/', ctrlLocations.homelist);
-router.get('/location', ctrlLocations.locationInfo);
-router.get('/location/review/new', ctrlLocations.addReview);
-
+router.get('/location/:id', ctrlLocations.locationInfo);          // dynamic id
+router.get('/location/:id/review/new', ctrlLocations.addReview);  // dynamic id for review
 
 /* Other pages */
 router.get('/about', ctrlOthers.about);
+
 module.exports = router;

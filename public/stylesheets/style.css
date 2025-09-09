@@ -24,7 +24,7 @@ legend {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svgxml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-nav .nav-link,
@@ -34,8 +34,10 @@ legend {
 }
 
 .card {
-  background-color: #469ea8;
+  background-color: #469ea8;  /* teal cards */
+  color: #fff;                /* make text readable */
   padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .card-primary {
@@ -52,14 +54,14 @@ legend {
 
 .review-header {
   background-color: #31727a;
+  color: #fff;                 /* ensure header text is visible */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
 }
 
 .review {
-  margin-right: -16px;
-  margin-left: -16px;
+  /* Removed the negative margins that broke layout */
   margin-bottom: 0.5em;
 }
 
@@ -75,11 +77,11 @@ h4 a, h4 a:hover {
 h4 small {
   font-size: 60%;
   line-height: 200%;
-  color: #aaa;
+  color: #ddd;   /* lighter gray for readability */
 }
 
 h1 small {
-  color: #aaa;
+  color: #ddd;
 }
 
 .address {
@@ -95,7 +97,7 @@ p {
 }
 
 a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 a:hover {
@@ -104,6 +106,6 @@ a:hover {
 
 body {
   font-family: "Cabin", Arial, sans-serif;
-  color: #fff;
-  background-color: #108a93;
+  color: #fff;                /* keep text white */
+  background-color: #108a93;  /* teal background */
 }
