@@ -1,8 +1,8 @@
-// Error handler
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,   // pass message
-    error: err              // pass error object
-  });
-});
+extends layout
+
+block content
+  h1= message
+  if error && error.status
+    h2 Status: #{error.status}
+  if error && error.stack
+    pre #{error.stack}
