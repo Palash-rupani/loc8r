@@ -1,5 +1,6 @@
 // db.js
 const mongoose = require('mongoose');
+require('./locations')
 const dbURI = 'mongodb://localhost/Loc8r';
 
 // Connect to MongoDB
@@ -43,6 +44,7 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
+
 
 // Export mongoose (optional, in case you want to require it elsewhere)
 module.exports = mongoose;
